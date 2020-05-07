@@ -58,6 +58,6 @@ function calcBar(bar){
     if(String(o).length==2){o=String(o);o=Number(o.substr(0,1))+Number(o.substr(1,1))};
   num=a+b+c+d+e+f+g+h+i+j+k+l+m+n+o;
   num=(num%10)==0?0:10-(num%10);
-  do{ransu=Math.floor(Math.random()*(max+1-min))+min;}while(ransu!==num);
+  do{ransu=Math.floor(Math.random()*(max+1-min))+min;}while(ransu==num);
   return num;
 }
