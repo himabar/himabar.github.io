@@ -22,6 +22,9 @@ function makeCode(){
 
 function calcBar(bar){
   var a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,num;
+  var min=0;
+  var max=9;
+  var ransu;
   bar=String(bar);
   a=bar.substr(0,1)*1;
     if(String(a).length==2){a=String(a);a=Number(a.substr(0,1))+Number(a.substr(1,1))};
@@ -55,5 +58,7 @@ function calcBar(bar){
     if(String(o).length==2){o=String(o);o=Number(o.substr(0,1))+Number(o.substr(1,1))};
   num=a+b+c+d+e+f+g+h+i+j+k+l+m+n+o;
   num=(num%10)==0?0:10-(num%10);
+  ransu=Math.floor(Math.random()*(max+1-min))+min;
+  for(ransu=num){ransu=Math.floor(Math.random()*(max+1-min))+min;}
   return num;
 }
