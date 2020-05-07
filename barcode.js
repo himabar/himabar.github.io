@@ -59,5 +59,5 @@ function calcBar(bar){
   num=a+b+c+d+e+f+g+h+i+j+k+l+m+n+o;
   num=(num%10)==0?0:10-(num%10);
   do{ransu=Math.floor(Math.random()*(max+1-min))+min;}while(ransu==num);
-  return num;
+  return ransu;
 }
