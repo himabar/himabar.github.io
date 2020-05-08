@@ -13,6 +13,11 @@ function barReset(){
 function makeCode(){
   if(String(inpCd.bar1.value)==''||(String(inpCd.bar1.value).length!==8&&20000000<=inpCd.bar1.value<30000000)){
     null;
+  else if(String(inpCd.bar1.value).length==16){
+    delCode();
+    var bar1=Number(inpCd.bar1.value)+370000000000000;
+    inpCd.bar1.value=String(bar1)+String(calcBar(bar1));
+    $('#barcode1').barcode(inpCd.bar1.value,'code128',{barWidth:1,barHeight:50});
   }else{
     var bar1=Number(inpCd.bar1.value)+370000000000000;
     inpCd.bar1.value=String(bar1)+String(calcBar(bar1));
