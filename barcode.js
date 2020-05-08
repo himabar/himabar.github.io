@@ -11,7 +11,7 @@ function barReset(){
 }
 
 function makeCode(){
-  if(String(inpCd.bar1.value)==''||(&&(String(inpCd.bar1.value).length!==16))){
+  if(String(inpCd.bar1.value)==''){
     null;
   }else if(String(inpCd.bar1.value).length==8&&20000000<=inpCd.bar1.value<30000000){
     var bar1=Number(inpCd.bar1.value)+370000000000000;
